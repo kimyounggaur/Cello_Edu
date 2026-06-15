@@ -461,51 +461,167 @@ function Fingerboard({
   onMarker: (marker: FingerboardMarker) => void;
   compact?: boolean;
 }) {
-  const markers = useMemo(() => fingerboardMarkers({ ...markerOptions, maxSemitone: compact ? 7 : 10 }), [markerOptions, compact]);
   const width = 360;
-  const height = compact ? 500 : 640;
-  const bottom = height - 54;
+  const height = compact ? 520 : 680;
   const maxSemitone = compact ? 7 : 10;
-  const yFor = (semitone: number) => 72 + (bottom - 72) * (semitone / maxSemitone);
-  const stringGap = width / (STRINGS.length + 1);
+  const centerX = width / 2;
+  const nutY = compact ? 70 : 82;
+  const boardTopY = nutY + 10;
+  const boardBottomY = height - 56;
+  const noteTopY = boardTopY + 26;
+  const noteBottomY = boardBottomY - 52;
+  const boardTopWidth = compact ? 118 : 122;
+  const boardBottomWidth = compact ? 204 : 220;
+  const stringTopGap = compact ? 22 : 24;
+  const stringBottomGap = compact ? 33 : 37;
+  const stringOffsets = [-1.5, -0.5, 0.5, 1.5];
+  const guideLabels = POSITIONS.filter((position) => position.firstFingerSemitone <= maxSemitone);
+  const yFor = (semitone: number) => noteTopY + (noteBottomY - noteTopY) * (semitone / maxSemitone);
+  const clamp01 = (value: number) => Math.min(1, Math.max(0, value));
+  const boardT = (y: number) => clamp01((y - boardTopY) / (boardBottomY - boardTopY));
+  const boardWidthAt = (y: number) => boardTopWidth + (boardBottomWidth - boardTopWidth) * Math.pow(boardT(y), 0.9);
+  const boardLeftAt = (y: number) => centerX - boardWidthAt(y) / 2;
+  const boardRightAt = (y: number) => centerX + boardWidthAt(y) / 2;
+  const stringGapAt = (y: number) => stringTopGap + (stringBottomGap - stringTopGap) * Math.pow(boardT(y), 0.82);
+  const stringX = (stringIndex: number, y: number) => centerX + stringOffsets[stringIndex] * stringGapAt(y);
+  const stringXById = (stringId: FingerboardMarker['stringId'], y: number) => {
+    const stringIndex = STRINGS.findIndex((string) => string.id === stringId);
+    return stringX(stringIndex, y);
+  };
+  const boardPath = [
+    `M ${centerX - boardTopWidth / 2} ${boardTopY}`,
+    `Q ${centerX} ${boardTopY - 8} ${centerX + boardTopWidth / 2} ${boardTopY}`,
+    `C ${centerX + boardTopWidth / 2 + 8} ${boardTopY + 150} ${centerX + boardBottomWidth / 2 + 3} ${boardBottomY - 110} ${centerX + boardBottomWidth / 2} ${boardBottomY - 24}`,
+    `Q ${centerX} ${boardBottomY + 18} ${centerX - boardBottomWidth / 2} ${boardBottomY - 24}`,
+    `C ${centerX - boardBottomWidth / 2 - 3} ${boardBottomY - 110} ${centerX - boardTopWidth / 2 - 8} ${boardTopY + 150} ${centerX - boardTopWidth / 2} ${boardTopY}`,
+    'Z',
+  ].join(' ');
+  const neckPath = [
+    `M ${centerX - 54} 20`,
+    `C ${centerX - 48} 46 ${centerX - 58} 72 ${centerX - 74} 100`,
+    `L ${centerX - 54} ${boardTopY + 22}`,
+    `C ${centerX - 36} ${boardTopY + 6} ${centerX + 36} ${boardTopY + 6} ${centerX + 54} ${boardTopY + 22}`,
+    `L ${centerX + 74} 100`,
+    `C ${centerX + 58} 72 ${centerX + 48} 46 ${centerX + 54} 20`,
+    `Q ${centerX} 6 ${centerX - 54} 20`,
+    'Z',
+  ].join(' ');
+  const bodyPath = [
+    `M ${centerX - 172} ${height - 140}`,
+    `C ${centerX - 170} ${height - 214} ${centerX - 95} ${height - 246} ${centerX - 34} ${height - 222}`,
+    `C ${centerX - 17} ${height - 214} ${centerX - 8} ${height - 208} ${centerX} ${height - 208}`,
+    `C ${centerX + 8} ${height - 208} ${centerX + 17} ${height - 214} ${centerX + 34} ${height - 222}`,
+    `C ${centerX + 95} ${height - 246} ${centerX + 170} ${height - 214} ${centerX + 172} ${height - 140}`,
+    `L ${width + 22} ${height + 26} L -22 ${height + 26} Z`,
+  ].join(' ');
+  const markers = useMemo(
+    () =>
+      fingerboardMarkers({ ...markerOptions, maxSemitone, width, height }).map((marker) => {
+        const y = yFor(marker.semitone);
+        return { ...marker, x: stringXById(marker.stringId, y), y };
+      }),
+    [height, markerOptions, maxSemitone],
+  );
 
   return (
     <div className="fingerboard-wrap">
       <svg className="fingerboard-svg" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="첼로 지판. 왼쪽부터 C현, G현, D현, A현">
         <defs>
-          <linearGradient id="board" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0" stopColor="#2c231b" />
-            <stop offset="1" stopColor="#110d0a" />
+          <linearGradient id="maple" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stopColor="#5d260f" />
+            <stop offset="0.2" stopColor="#b95f18" />
+            <stop offset="0.5" stopColor="#d2872a" />
+            <stop offset="0.78" stopColor="#8b3a11" />
+            <stop offset="1" stopColor="#3d170b" />
           </linearGradient>
+          <linearGradient id="maple-grain" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stopColor="rgba(255,255,255,0.36)" />
+            <stop offset="0.28" stopColor="rgba(255,255,255,0)" />
+            <stop offset="0.72" stopColor="rgba(65,22,6,0.28)" />
+            <stop offset="1" stopColor="rgba(20,7,3,0.5)" />
+          </linearGradient>
+          <linearGradient id="ebony" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stopColor="#070706" />
+            <stop offset="0.12" stopColor="#20201d" />
+            <stop offset="0.32" stopColor="#10100f" />
+            <stop offset="0.5" stopColor="#343431" />
+            <stop offset="0.68" stopColor="#121210" />
+            <stop offset="0.88" stopColor="#24231f" />
+            <stop offset="1" stopColor="#050504" />
+          </linearGradient>
+          <linearGradient id="ebony-length" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stopColor="rgba(255,255,255,0.2)" />
+            <stop offset="0.12" stopColor="rgba(255,255,255,0.04)" />
+            <stop offset="0.72" stopColor="rgba(0,0,0,0)" />
+            <stop offset="1" stopColor="rgba(0,0,0,0.48)" />
+          </linearGradient>
+          <linearGradient id="nut" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stopColor="#3a3935" />
+            <stop offset="0.52" stopColor="#0d0d0c" />
+            <stop offset="1" stopColor="#4a4740" />
+          </linearGradient>
+          <filter id="instrument-shadow" x="-20%" y="-10%" width="140%" height="130%">
+            <feDropShadow dx="0" dy="14" stdDeviation="12" floodColor="#000000" floodOpacity="0.38" />
+          </filter>
+          <filter id="note-shadow" x="-60%" y="-60%" width="220%" height="220%">
+            <feDropShadow dx="0" dy="3" stdDeviation="2.2" floodColor="#000000" floodOpacity="0.48" />
+          </filter>
         </defs>
-        <rect x="12" y="36" width="336" height={height - 66} rx="26" fill="url(#board)" stroke="#6d5632" strokeWidth="1.5" />
-        <rect x="34" y="58" width="292" height="10" rx="4" fill="#e8dcc0" />
-        {POSITIONS.map((position) => (
+
+        <rect x="0" y="0" width={width} height={height} rx="20" fill="rgba(7, 5, 4, 0.18)" />
+        <path d={bodyPath} fill="url(#maple)" opacity="0.92" />
+        <path d={bodyPath} fill="url(#maple-grain)" opacity="0.55" />
+        {Array.from({ length: 18 }).map((_, index) => {
+          const x = 18 + index * 19;
+          return <path key={index} d={`M ${x} ${height - 196} C ${x - 9} ${height - 92} ${x + 12} ${height - 44} ${x - 4} ${height + 14}`} stroke="#5c2209" strokeWidth="0.7" opacity="0.18" />;
+        })}
+        <path d={neckPath} fill="url(#maple)" opacity="0.96" filter="url(#instrument-shadow)" />
+        <path d={`M ${centerX - 80} ${nutY - 7} Q ${centerX} ${nutY - 18} ${centerX + 80} ${nutY - 7} L ${centerX + 72} ${nutY + 12} Q ${centerX} ${nutY + 2} ${centerX - 72} ${nutY + 12} Z`} fill="url(#nut)" stroke="#070707" strokeWidth="1.2" />
+        <path d={boardPath} fill="url(#ebony)" stroke="#5a574f" strokeWidth="1.2" filter="url(#instrument-shadow)" />
+        <path d={boardPath} fill="url(#ebony-length)" opacity="0.8" />
+        <path d={`M ${centerX - 18} ${boardTopY + 8} C ${centerX - 8} ${boardTopY + 210} ${centerX - 6} ${boardBottomY - 124} ${centerX - 18} ${boardBottomY - 38}`} stroke="#7d7b70" strokeWidth="2.2" opacity="0.28" fill="none" />
+        <path d={`M ${centerX + 20} ${boardTopY + 10} C ${centerX + 12} ${boardTopY + 220} ${centerX + 11} ${boardBottomY - 126} ${centerX + 24} ${boardBottomY - 40}`} stroke="#ffffff" strokeWidth="1.1" opacity="0.16" fill="none" />
+        <path d={`M ${boardLeftAt(boardTopY + 8) + 6} ${boardTopY + 18} C ${boardLeftAt((boardTopY + boardBottomY) / 2) + 10} ${(boardTopY + boardBottomY) / 2} ${boardLeftAt(boardBottomY - 70) + 14} ${boardBottomY - 70} ${boardLeftAt(boardBottomY - 28) + 18} ${boardBottomY - 28}`} stroke="#ffffff" strokeWidth="1.2" opacity="0.12" fill="none" />
+        <path d={`M ${boardRightAt(boardTopY + 8) - 6} ${boardTopY + 18} C ${boardRightAt((boardTopY + boardBottomY) / 2) - 10} ${(boardTopY + boardBottomY) / 2} ${boardRightAt(boardBottomY - 70) - 14} ${boardBottomY - 70} ${boardRightAt(boardBottomY - 28) - 18} ${boardBottomY - 28}`} stroke="#000000" strokeWidth="2.4" opacity="0.24" fill="none" />
+
+        {guideLabels.map((position) => {
+          const y = yFor(position.firstFingerSemitone);
+          return (
           <g key={position.id}>
-            <line x1="34" x2="326" y1={yFor(position.firstFingerSemitone)} y2={yFor(position.firstFingerSemitone)} stroke="#9a7b2e" strokeDasharray="5 8" opacity="0.45" />
-            <text x="24" y={yFor(position.firstFingerSemitone) + 5} fill="#e6cb7e" fontSize="13" fontWeight="700" textAnchor="middle">
+            <path d={`M ${boardLeftAt(y) + 14} ${y} C ${centerX - 38} ${y + 4} ${centerX + 38} ${y + 4} ${boardRightAt(y) - 14} ${y}`} stroke="#d8b765" strokeDasharray="4 9" strokeLinecap="round" opacity="0.32" fill="none" />
+            <text x={boardLeftAt(y) - 18} y={y + 4} fill="#e6cb7e" fontSize="12" fontWeight="800" textAnchor="middle">
               {position.label}
             </text>
           </g>
-        ))}
+          );
+        })}
+
         {STRINGS.map((string, index) => {
-          const x = stringGap * (index + 1);
+          const topX = stringX(index, nutY - 36);
+          const midY = (nutY + boardBottomY) / 2;
+          const bottomX = stringX(index, boardBottomY + 30);
+          const path = `M ${topX} ${nutY - 36} C ${stringX(index, midY - 120)} ${midY - 120} ${stringX(index, midY + 96)} ${midY + 96} ${bottomX} ${boardBottomY + 30}`;
+          const strokeWidth = Math.max(1.25, string.gauge * 0.68);
           return (
             <g key={string.id}>
-              <line x1={x} x2={x} y1="68" y2={bottom + 14} stroke={string.color} strokeWidth={string.gauge} strokeLinecap="round" />
-              <text x={x} y="28" fill="#f4ecd8" fontSize="16" fontWeight="800" textAnchor="middle">
+              <path d={path} stroke="#000000" strokeWidth={strokeWidth + 2.8} strokeLinecap="round" opacity="0.42" fill="none" />
+              <path d={path} stroke={string.color} strokeWidth={strokeWidth} strokeLinecap="round" fill="none" />
+              <path d={path} stroke="#ffffff" strokeWidth="0.7" strokeLinecap="round" opacity="0.42" fill="none" />
+              <path d={`M ${stringX(index, nutY - 46)} ${nutY - 48} L ${stringX(index, nutY - 12)} ${nutY - 12}`} stroke={string.color} strokeWidth={strokeWidth + 2.2} strokeLinecap="round" opacity="0.7" />
+              <text x={topX} y={nutY - 50} fill="#f4ecd8" fontSize="14" fontWeight="900" textAnchor="middle">
                 {string.id}
               </text>
-              <text x={x} y="46" fill="#b7ac92" fontSize="11" textAnchor="middle">
+              <text x={topX} y={nutY - 18} fill="#b7ac92" fontSize="10" fontWeight="700" textAnchor="middle">
                 {string.sci}
               </text>
             </g>
           );
         })}
+
         {markers.map((marker) => {
           const isSelected = selectedMidi === marker.info.midi;
           const isHighlighted = highlightedPc !== null && highlightedPc !== undefined && marker.info.pc === highlightedPc;
-          const radius = isSelected ? 18 : isHighlighted ? 16 : marker.isNatural ? 13 : 11;
+          const radius = isSelected ? 17 : isHighlighted ? 15 : marker.isNatural ? 12 : 10.5;
           return (
             <g key={marker.id} role="button" tabIndex={0} aria-label={marker.info.label} onClick={() => onMarker(marker)} onKeyDown={(event) => {
               if (event.key === 'Enter' || event.key === ' ') onMarker(marker);
@@ -515,15 +631,16 @@ function Fingerboard({
                 cx={marker.x}
                 cy={marker.y}
                 r={radius}
-                fill={marker.isNatural ? '#f4ecd8' : 'transparent'}
+                fill={marker.isNatural ? '#f4ecd8' : 'rgba(17, 14, 11, 0.72)'}
                 stroke={isSelected || isHighlighted ? '#e6cb7e' : '#b7ac92'}
                 strokeWidth={isSelected || isHighlighted ? 3 : 1.4}
                 className="note-dot"
+                filter="url(#note-shadow)"
               />
-              <text x={marker.x} y={marker.y - 2} textAnchor="middle" fontSize={marker.info.finger === 0 ? 10 : 11} fontWeight="800" fill={marker.isNatural ? '#211a12' : '#f4ecd8'}>
+              <text x={marker.x} y={marker.y - 2} textAnchor="middle" fontSize={marker.info.finger === 0 ? 9.5 : 10.5} fontWeight="900" fill={marker.isNatural ? '#211a12' : '#f4ecd8'}>
                 {marker.info.finger === 0 ? '0' : marker.info.finger}
               </text>
-              <text x={marker.x} y={marker.y + 11} textAnchor="middle" fontSize="9.5" fontWeight="700" fill={marker.isNatural ? '#211a12' : '#f4ecd8'}>
+              <text x={marker.x} y={marker.y + 10.5} textAnchor="middle" fontSize="8.7" fontWeight="800" fill={marker.isNatural ? '#211a12' : '#f4ecd8'}>
                 {displayName(marker.info.pc, markerOptions.labelSystem, markerOptions)}
               </text>
             </g>
