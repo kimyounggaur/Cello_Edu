@@ -1,0 +1,18 @@
+{
+  "name": "지판온 · 첼로 운지법 배우기",
+  "short_name": "지판온",
+  "description": "첼로 지판에서 현, 손가락, 음이름, 계이름, 소리를 연결해 배우는 모바일 웹앱",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1b1712",
+  "theme_color": "#1b1712",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

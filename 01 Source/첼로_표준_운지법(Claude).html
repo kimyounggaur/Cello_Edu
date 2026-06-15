@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>첼로 표준 운지표 · Cello Fingering Chart</title>
+<meta name="description" content="첼로 표준 운지표 — 넥 포지션 ½–IV, 닫힌 자세 기준. C·G·D·A 완전5도 조율. 포지션별 운지·지판 지도.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1b1712;--bg2:#13100c;--ivory:#f4ecd8;--dim:#b7ac92;--brass:#c9a24b;--brassL:#e6cb7e;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(120% 80% at 50% -10%,#241e17 0%,var(--bg) 45%,var(--bg2) 100%);background-attachment:fixed;color:var(--ivory);font-family:"Noto Sans KR",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:14px;padding:13px 22px;background:rgba(17,14,10,.86);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);border-bottom:1px solid rgba(201,162,75,.32)}
+.brand{font-family:"Noto Serif KR",serif;font-weight:700;font-size:18px;letter-spacing:.5px}
+.brand .en{font-weight:500;font-size:11.5px;color:var(--brass);letter-spacing:3px;margin-left:11px}
+.spacer{flex:1}
+.btn{font-family:"Noto Sans KR",sans-serif;font-size:13px;color:var(--brassL);background:transparent;border:1px solid rgba(201,162,75,.5);border-radius:999px;padding:8px 16px;cursor:pointer;transition:.18s;white-space:nowrap}
+.btn:hover{background:rgba(201,162,75,.12);border-color:var(--brassL)}
+main{max-width:1240px;margin:0 auto;padding:24px 22px 6px}
+.intro{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin:4px 4px 18px}
+.intro .ey{font-family:"Noto Serif KR",serif;color:var(--brass);font-size:12.5px;letter-spacing:3px}
+.intro .ds{color:var(--dim);font-size:14px}
+.intro .tune{color:var(--dim);font-size:12.5px;margin-left:auto}
+.intro .tune b{color:var(--ivory);font-weight:500}
+.chartwrap{overflow-x:auto;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.55),0 0 0 1px rgba(201,162,75,.18);background:#100d0a;-webkit-overflow-scrolling:touch}
+.chartwrap svg{display:block;min-width:720px;width:100%;height:auto}
+.hint{color:var(--dim);font-size:12px;margin:9px 6px 0;text-align:right}
+footer{max-width:1240px;margin:16px auto 46px;padding:16px 26px;color:var(--dim);font-size:12.5px;border-top:1px solid rgba(201,162,75,.2);display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+footer .serif{font-family:"Noto Serif KR",serif;color:var(--ivory)}
+@media (max-width:560px){.brand{font-size:16px}.brand .en{display:none}main{padding:18px 12px}.intro .tune{margin-left:0}}
+@media print{body{background:#fff}.topbar,.hint{display:none}.chartwrap{box-shadow:none;background:transparent;overflow:visible}.chartwrap svg{min-width:0}main{padding:0;max-width:none}footer{border:0}@page{margin:8mm}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <span class="brand">첼로 표준 운지표<span class="en">CELLO FINGERING CHART</span></span>
+  <span class="spacer"></span>
+  <button class="btn" onclick="window.print()">인쇄 / PDF로 저장</button>
+</header>
+<main>
+  <div class="intro">
+    <span class="ey">넥 포지션 ½–IV</span>
+    <span class="ds">닫힌 자세(클로즈드) 기준 · 연주자 시점 (왼→오른쪽: C · G · D · A)</span>
+    <span class="tune">조율 <b>C2</b> 65.41 · <b>G2</b> 98.00 · <b>D3</b> 146.83 · <b>A3</b> 220.00 Hz</span>
+  </div>
+  <div class="chartwrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 2150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block">
+<defs>
+<linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#221D17"/><stop offset="1" stop-color="#15110D"/></linearGradient>
+<linearGradient id="ebony" x1="0" y1="0" x2="0.25" y2="1">
+<stop offset="0" stop-color="#2A241D"/><stop offset="1" stop-color="#0C0A08"/></linearGradient>
+<linearGradient id="parch" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F5ECD7"/><stop offset="1" stop-color="#ECE0C5"/></linearGradient>
+<linearGradient id="nut" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#FBF4E2"/><stop offset="0.5" stop-color="#E7D9BB"/><stop offset="1" stop-color="#C9B68E"/></linearGradient>
+<linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#9A7B2E"/><stop offset="0.5" stop-color="#E6CB7E"/><stop offset="1" stop-color="#9A7B2E"/></linearGradient>
+</defs>
+<rect x="0.0" y="0.0" width="1200.0" height="2150.0" fill="url(#page)"/>
+<rect x="24.0" y="24.0" width="1152.0" height="2102.0" fill="none" rx="18" stroke="#C9A24B" stroke-width="1.2" opacity="0.28"/>
+<text x="600.0" y="86.0" font-family="Noto Serif KR" font-size="52" fill="#F4ECD8" font-weight="bold" text-anchor="middle" letter-spacing="2">첼로 표준 운지표</text>
+<text x="600.0" y="120.0" font-family="Noto Serif KR" font-size="20" fill="#C9A24B" font-weight="normal" text-anchor="middle" letter-spacing="6">STANDARD CELLO FINGERING CHART</text>
+<text x="600.0" y="150.0" font-family="Noto Sans KR" font-size="15.5" fill="#A99E84" font-weight="normal" text-anchor="middle" letter-spacing="0.5">넥 포지션 ½–IV · 닫힌 자세(클로즈드) 기준 · 연주자 시점 (왼쪽부터 C · G · D · A)</text>
+<line x1="70.0" y1="172.0" x2="1130.0" y2="172.0" stroke="url(#brass)" stroke-width="2.2" stroke-linecap="butt"/>
+<line x1="70.0" y1="177.0" x2="1130.0" y2="177.0" stroke="#C9A24B" stroke-width="0.8" stroke-linecap="butt" opacity="0.5"/>
+<text x="70.0" y="214.0" font-family="Noto Serif KR" font-size="14" fill="#C9A24B" font-weight="normal" text-anchor="start" letter-spacing="3">조율 · TUNING</text>
+<text x="220.0" y="214.0" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">네 줄을 완전5도로 조율</text>
+<text x="1130.0" y="214.0" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="end">낮은음 ←→ 높은음</text>
+<rect x="70.0" y="232.0" width="251.5" height="72.0" fill="url(#parch)" rx="10" stroke="#9A7B2E" stroke-width="0.8" opacity="0.97"/>
+<rect x="70.0" y="232.0" width="6.0" height="72.0" fill="#C9A36A"/>
+<text x="100.0" y="279.0" font-family="Noto Serif KR" font-size="34" fill="#26201A" font-weight="bold" text-anchor="start">C</text>
+<text x="148.0" y="262.0" font-family="Noto Sans KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="start">C2</text>
+<text x="148.0" y="283.0" font-family="Noto Sans KR" font-size="13.5" fill="#6B5F49" font-weight="normal" text-anchor="start">65.41 Hz</text>
+<text x="307.5" y="254.0" font-family="Noto Sans KR" font-size="11" fill="#8A7D63" font-weight="normal" text-anchor="end">4번 현</text>
+<rect x="339.5" y="232.0" width="251.5" height="72.0" fill="url(#parch)" rx="10" stroke="#9A7B2E" stroke-width="0.8" opacity="0.97"/>
+<rect x="339.5" y="232.0" width="6.0" height="72.0" fill="#CBB07A"/>
+<text x="369.5" y="279.0" font-family="Noto Serif KR" font-size="34" fill="#26201A" font-weight="bold" text-anchor="start">G</text>
+<text x="417.5" y="262.0" font-family="Noto Sans KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="start">G2</text>
+<text x="417.5" y="283.0" font-family="Noto Sans KR" font-size="13.5" fill="#6B5F49" font-weight="normal" text-anchor="start">98.00 Hz</text>
+<text x="577.0" y="254.0" font-family="Noto Sans KR" font-size="11" fill="#8A7D63" font-weight="normal" text-anchor="end">3번 현</text>
+<rect x="609.0" y="232.0" width="251.5" height="72.0" fill="url(#parch)" rx="10" stroke="#9A7B2E" stroke-width="0.8" opacity="0.97"/>
+<rect x="609.0" y="232.0" width="6.0" height="72.0" fill="#D6CDBA"/>
+<text x="639.0" y="279.0" font-family="Noto Serif KR" font-size="34" fill="#26201A" font-weight="bold" text-anchor="start">D</text>
+<text x="687.0" y="262.0" font-family="Noto Sans KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="start">D3</text>
+<text x="687.0" y="283.0" font-family="Noto Sans KR" font-size="13.5" fill="#6B5F49" font-weight="normal" text-anchor="start">146.83 Hz</text>
+<text x="846.5" y="254.0" font-family="Noto Sans KR" font-size="11" fill="#8A7D63" font-weight="normal" text-anchor="end">2번 현</text>
+<rect x="878.5" y="232.0" width="251.5" height="72.0" fill="url(#parch)" rx="10" stroke="#9A7B2E" stroke-width="0.8" opacity="0.97"/>
+<rect x="878.5" y="232.0" width="6.0" height="72.0" fill="#E0D8C6"/>
+<text x="908.5" y="279.0" font-family="Noto Serif KR" font-size="34" fill="#26201A" font-weight="bold" text-anchor="start">A</text>
+<text x="956.5" y="262.0" font-family="Noto Sans KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="start">A3</text>
+<text x="956.5" y="283.0" font-family="Noto Sans KR" font-size="13.5" fill="#6B5F49" font-weight="normal" text-anchor="start">220.00 Hz</text>
+<text x="1116.0" y="254.0" font-family="Noto Sans KR" font-size="11" fill="#8A7D63" font-weight="normal" text-anchor="end">1번 현</text>
+<text x="70.0" y="348.0" font-family="Noto Serif KR" font-size="16" fill="#C9A24B" font-weight="normal" text-anchor="start" letter-spacing="2">지판 운지 지도 · FINGERBOARD MAP</text>
+<text x="1130.0" y="348.0" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="end">세로 한 칸 = 반음 (간격은 도식적)</text>
+<rect x="60.0" y="378.0" width="1080.0" height="676.0" fill="url(#ebony)" rx="16" stroke="#9A7B2E" stroke-width="1.4"/>
+<rect x="60.0" y="378.0" width="1080.0" height="676.0" fill="none" rx="16" stroke="#000000" stroke-width="1" opacity="0.4"/>
+<rect x="176.0" y="524.0" width="950.0" height="220.0" fill="#C9A24B" rx="10" opacity="0.05"/>
+<text x="1054.0" y="544.0" font-family="Noto Serif KR" font-size="15" fill="#C9A24B" font-weight="bold" text-anchor="start">1st</text>
+<text x="1054.0" y="560.0" font-family="Noto Sans KR" font-size="11" fill="#E6CB7E" font-weight="normal" text-anchor="start" opacity="0.8">포지션</text>
+<text x="1054.0" y="706.0" font-family="Noto Sans KR" font-size="11" fill="#8C826B" font-weight="normal" text-anchor="start" opacity="0.85">가장</text>
+<text x="1054.0" y="720.0" font-family="Noto Sans KR" font-size="11" fill="#8C826B" font-weight="normal" text-anchor="start" opacity="0.85">기본</text>
+<line x1="190.0" y1="494.0" x2="1118.0" y2="494.0" stroke="#C9A24B" stroke-width="1" stroke-linecap="butt" opacity="0.16"/>
+<text x="182.0" y="503.0" font-family="Noto Serif KR" font-size="26" fill="#C9A24B" font-weight="bold" text-anchor="end">½</text>
+<text x="182.0" y="481.0" font-family="Noto Sans KR" font-size="10.5" fill="#8C826B" font-weight="normal" text-anchor="end">하프</text>
+<line x1="190.0" y1="550.0" x2="1118.0" y2="550.0" stroke="#C9A24B" stroke-width="1" stroke-linecap="butt" opacity="0.16"/>
+<text x="182.0" y="559.0" font-family="Noto Serif KR" font-size="26" fill="#C9A24B" font-weight="bold" text-anchor="end">I</text>
+<text x="182.0" y="537.0" font-family="Noto Sans KR" font-size="10.5" fill="#8C826B" font-weight="normal" text-anchor="end">1st</text>
+<line x1="190.0" y1="606.0" x2="1118.0" y2="606.0" stroke="#C9A24B" stroke-width="1" stroke-linecap="butt" opacity="0.16"/>
+<text x="182.0" y="615.0" font-family="Noto Serif KR" font-size="26" fill="#C9A24B" font-weight="bold" text-anchor="end">II</text>
+<text x="182.0" y="593.0" font-family="Noto Sans KR" font-size="10.5" fill="#8C826B" font-weight="normal" text-anchor="end">2nd</text>
+<line x1="190.0" y1="718.0" x2="1118.0" y2="718.0" stroke="#C9A24B" stroke-width="1" stroke-linecap="butt" opacity="0.16"/>
+<text x="182.0" y="727.0" font-family="Noto Serif KR" font-size="26" fill="#C9A24B" font-weight="bold" text-anchor="end">III</text>
+<text x="182.0" y="705.0" font-family="Noto Sans KR" font-size="10.5" fill="#8C826B" font-weight="normal" text-anchor="end">3rd</text>
+<line x1="190.0" y1="830.0" x2="1118.0" y2="830.0" stroke="#C9A24B" stroke-width="1" stroke-linecap="butt" opacity="0.16"/>
+<text x="182.0" y="839.0" font-family="Noto Serif KR" font-size="26" fill="#C9A24B" font-weight="bold" text-anchor="end">IV</text>
+<text x="182.0" y="817.0" font-family="Noto Sans KR" font-size="10.5" fill="#8C826B" font-weight="normal" text-anchor="end">4th</text>
+<text x="182.0" y="394.0" font-family="Noto Serif KR" font-size="12" fill="#C9A24B" font-weight="normal" text-anchor="end" letter-spacing="1">포지션</text>
+<text x="182.0" y="412.0" font-family="Noto Sans KR" font-size="9.5" fill="#8C826B" font-weight="normal" text-anchor="end">(1번 손가락)</text>
+<text x="182.0" y="447.0" font-family="Noto Serif KR" font-size="17" fill="#A99E84" font-weight="normal" text-anchor="end">0</text>
+<text x="182.0" y="429.0" font-family="Noto Sans KR" font-size="10" fill="#8C826B" font-weight="normal" text-anchor="end">개방</text>
+<line x1="210.0" y1="412.0" x2="210.0" y2="1038.0" stroke="#C9A36A" stroke-width="6.0" stroke-linecap="round"/>
+<line x1="210.0" y1="412.0" x2="210.0" y2="1038.0" stroke="#FFFFFF" stroke-width="1.08" stroke-linecap="round" opacity="0.25"/>
+<line x1="476.7" y1="412.0" x2="476.7" y2="1038.0" stroke="#CBB07A" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="476.7" y1="412.0" x2="476.7" y2="1038.0" stroke="#FFFFFF" stroke-width="0.828" stroke-linecap="round" opacity="0.25"/>
+<line x1="743.3" y1="412.0" x2="743.3" y2="1038.0" stroke="#D6CDBA" stroke-width="3.3" stroke-linecap="round"/>
+<line x1="743.3" y1="412.0" x2="743.3" y2="1038.0" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round" opacity="0.25"/>
+<line x1="1010.0" y1="412.0" x2="1010.0" y2="1038.0" stroke="#E0D8C6" stroke-width="2.3" stroke-linecap="round"/>
+<line x1="1010.0" y1="412.0" x2="1010.0" y2="1038.0" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round" opacity="0.25"/>
+<rect x="188.0" y="433.0" width="844.0" height="9.0" fill="url(#nut)" rx="3"/>
+<text x="210.0" y="402.0" font-family="Noto Serif KR" font-size="19" fill="#F4ECD8" font-weight="bold" text-anchor="middle">C2</text>
+<circle cx="210.0" cy="438.0" r="8.5" fill="none" stroke="#C9A24B" stroke-width="1.6"/>
+<text x="476.7" y="402.0" font-family="Noto Serif KR" font-size="19" fill="#F4ECD8" font-weight="bold" text-anchor="middle">G2</text>
+<circle cx="476.7" cy="438.0" r="8.5" fill="none" stroke="#C9A24B" stroke-width="1.6"/>
+<text x="743.3" y="402.0" font-family="Noto Serif KR" font-size="19" fill="#F4ECD8" font-weight="bold" text-anchor="middle">D3</text>
+<circle cx="743.3" cy="438.0" r="8.5" fill="none" stroke="#C9A24B" stroke-width="1.6"/>
+<text x="1010.0" y="402.0" font-family="Noto Serif KR" font-size="19" fill="#F4ECD8" font-weight="bold" text-anchor="middle">A3</text>
+<circle cx="1010.0" cy="438.0" r="8.5" fill="none" stroke="#C9A24B" stroke-width="1.6"/>
+<text x="600.0" y="1034.0" font-family="Noto Sans KR" font-size="11" fill="#8C826B" font-weight="normal" text-anchor="middle">↓ 브리지 방향 — 아래로 갈수록 음이 높아집니다</text>
+<circle cx="210.0" cy="494.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="225.0" y="498.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">C♯/D♭</text>
+<circle cx="210.0" cy="550.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="210.0" y="555.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<circle cx="210.0" cy="606.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="225.0" y="610.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">D♯/E♭</text>
+<circle cx="210.0" cy="662.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="210.0" y="667.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<circle cx="210.0" cy="718.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="210.0" y="723.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<circle cx="210.0" cy="774.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="225.0" y="778.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">F♯/G♭</text>
+<circle cx="210.0" cy="830.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="210.0" y="835.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<circle cx="210.0" cy="886.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="225.0" y="890.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">G♯/A♭</text>
+<circle cx="210.0" cy="942.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="210.0" y="947.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">A</text>
+<circle cx="210.0" cy="998.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="225.0" y="1002.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">A♯/B♭</text>
+<circle cx="476.7" cy="494.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="491.7" y="498.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">G♯/A♭</text>
+<circle cx="476.7" cy="550.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="476.7" y="555.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">A</text>
+<circle cx="476.7" cy="606.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="491.7" y="610.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">A♯/B♭</text>
+<circle cx="476.7" cy="662.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="476.7" y="667.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<circle cx="476.7" cy="718.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="476.7" y="723.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<circle cx="476.7" cy="774.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="491.7" y="778.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">C♯/D♭</text>
+<circle cx="476.7" cy="830.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="476.7" y="835.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<circle cx="476.7" cy="886.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="491.7" y="890.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">D♯/E♭</text>
+<circle cx="476.7" cy="942.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="476.7" y="947.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<circle cx="476.7" cy="998.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="476.7" y="1003.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<circle cx="743.3" cy="494.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="758.3" y="498.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">D♯/E♭</text>
+<circle cx="743.3" cy="550.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="743.3" y="555.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<circle cx="743.3" cy="606.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="743.3" y="611.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<circle cx="743.3" cy="662.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="758.3" y="666.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">F♯/G♭</text>
+<circle cx="743.3" cy="718.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="743.3" y="723.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<circle cx="743.3" cy="774.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="758.3" y="778.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">G♯/A♭</text>
+<circle cx="743.3" cy="830.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="743.3" y="835.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">A</text>
+<circle cx="743.3" cy="886.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="758.3" y="890.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">A♯/B♭</text>
+<circle cx="743.3" cy="942.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="743.3" y="947.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<circle cx="743.3" cy="998.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="743.3" y="1003.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<circle cx="1010.0" cy="494.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="1025.0" y="498.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">A♯/B♭</text>
+<circle cx="1010.0" cy="550.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="1010.0" y="555.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<circle cx="1010.0" cy="606.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="1010.0" y="611.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<circle cx="1010.0" cy="662.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="1025.0" y="666.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">C♯/D♭</text>
+<circle cx="1010.0" cy="718.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="1010.0" y="723.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<circle cx="1010.0" cy="774.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="1025.0" y="778.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">D♯/E♭</text>
+<circle cx="1010.0" cy="830.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="1010.0" y="835.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<circle cx="1010.0" cy="886.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="1010.0" y="891.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<circle cx="1010.0" cy="942.0" r="8.5" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="1025.0" y="946.5" font-family="Noto Sans KR" font-size="12.5" fill="#A99E84" font-weight="normal" text-anchor="start">F♯/G♭</text>
+<circle cx="1010.0" cy="998.0" r="16.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="1010.0" y="1003.5" font-family="Noto Serif KR" font-size="16" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<rect x="60.0" y="1075.0" width="1080.0" height="120.0" fill="url(#parch)" rx="12" stroke="#9A7B2E" stroke-width="0.8" opacity="0.97"/>
+<text x="94.0" y="1105.0" font-family="Noto Serif KR" font-size="13" fill="#9A7B2E" font-weight="bold" text-anchor="start" letter-spacing="2">기호 안내 · LEGEND</text>
+<circle cx="104.0" cy="1136.0" r="8.5" fill="none" stroke="#C9A24B" stroke-width="1.6"/>
+<text x="122.0" y="1141.0" font-family="Noto Sans KR" font-size="13" fill="#26201A" font-weight="normal" text-anchor="start">개방현 (0번, 손가락 안 짚음)</text>
+<circle cx="104.0" cy="1168.0" r="11.0" fill="#F4ECD8" stroke="#CBBDA0" stroke-width="1"/>
+<text x="99.0" y="1172.0" font-family="Noto Serif KR" font-size="12" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<text x="122.0" y="1173.0" font-family="Noto Sans KR" font-size="13" fill="#26201A" font-weight="normal" text-anchor="start">자연음(내추럴) — 원 안에 음이름</text>
+<circle cx="440.0" cy="1136.0" r="8.0" fill="none" stroke="#8C826B" stroke-width="1.6"/>
+<text x="454.0" y="1141.0" font-family="Noto Sans KR" font-size="13" fill="#26201A" font-weight="normal" text-anchor="start">반음 ♯/♭ (검은건반) — 오른쪽에 음이름</text>
+<text x="430.0" y="1173.0" font-family="Noto Serif KR" font-size="17" fill="#9A7B2E" font-weight="bold" text-anchor="start">I  II  III  IV</text>
+<text x="526.0" y="1173.0" font-family="Noto Sans KR" font-size="13" fill="#26201A" font-weight="normal" text-anchor="start">포지션 = 1번 손가락의 위치(로마숫자)</text>
+<text x="830.0" y="1141.0" font-family="Noto Sans KR" font-size="13" fill="#26201A" font-weight="bold" text-anchor="start">연주자 시점</text>
+<text x="830.0" y="1173.0" font-family="Noto Sans KR" font-size="13" fill="#26201A" font-weight="normal" text-anchor="start">왼 → 오른쪽:  C  G  D  A  (낮은음→높은음)</text>
+<text x="70.0" y="1228.0" font-family="Noto Serif KR" font-size="16" fill="#C9A24B" font-weight="normal" text-anchor="start" letter-spacing="2">포지션별 운지표 · CLOSED-POSITION FINGERING</text>
+<text x="1130.0" y="1228.0" font-family="Noto Sans KR" font-size="13" fill="#A99E84" font-weight="normal" text-anchor="end">손가락 1 · 2 · 3 · 4</text>
+<rect x="160.0" y="1246.0" width="880.0" height="626.0" fill="url(#parch)" rx="12" stroke="#9A7B2E" stroke-width="0.9"/>
+<rect x="180.0" y="1248.0" width="840.0" height="42.0" fill="#0C0A08"/>
+<rect x="180.0" y="1248.0" width="840.0" height="42.0" fill="#C9A24B" opacity="0.08"/>
+<text x="230.0" y="1275.0" font-family="Noto Serif KR" font-size="14" fill="#F4ECD8" font-weight="bold" text-anchor="middle">포지션</text>
+<text x="350.0" y="1275.0" font-family="Noto Sans KR" font-size="13.5" fill="#F4ECD8" font-weight="normal" text-anchor="middle">현 (String)</text>
+<text x="495.0" y="1275.0" font-family="Noto Serif KR" font-size="17" fill="#E6CB7E" font-weight="bold" text-anchor="middle">1</text>
+<text x="645.0" y="1275.0" font-family="Noto Serif KR" font-size="17" fill="#E6CB7E" font-weight="bold" text-anchor="middle">2</text>
+<text x="795.0" y="1275.0" font-family="Noto Serif KR" font-size="17" fill="#E6CB7E" font-weight="bold" text-anchor="middle">3</text>
+<text x="945.0" y="1275.0" font-family="Noto Serif KR" font-size="17" fill="#E6CB7E" font-weight="bold" text-anchor="middle">4</text>
+<line x1="180.0" y1="1290.0" x2="1020.0" y2="1290.0" stroke="#9A7B2E" stroke-width="0.8" stroke-linecap="butt" opacity="0.55"/>
+<text x="230.0" y="1350.0" font-family="Noto Serif KR" font-size="30" fill="#9A7B2E" font-weight="bold" text-anchor="middle">½</text>
+<text x="230.0" y="1370.0" font-family="Noto Sans KR" font-size="10.5" fill="#8A7D63" font-weight="normal" text-anchor="middle">하프 pos.</text>
+<circle cx="302.0" cy="1304.5" r="5.5" fill="#C9A36A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1309.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">C 현</text>
+<text x="495.0" y="1309.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">C♯/D♭</text>
+<text x="645.0" y="1309.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<text x="795.0" y="1309.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">D♯/E♭</text>
+<text x="945.0" y="1309.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<line x1="280.0" y1="1319.0" x2="1020.0" y2="1319.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1333.5" r="5.5" fill="#CBB07A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1338.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">G 현</text>
+<text x="495.0" y="1338.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">G♯/A♭</text>
+<text x="645.0" y="1338.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">A</text>
+<text x="795.0" y="1338.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">A♯/B♭</text>
+<text x="945.0" y="1338.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<line x1="280.0" y1="1348.0" x2="1020.0" y2="1348.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1362.5" r="5.5" fill="#D6CDBA" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1367.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">D 현</text>
+<text x="495.0" y="1367.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">D♯/E♭</text>
+<text x="645.0" y="1367.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<text x="795.0" y="1367.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<text x="945.0" y="1367.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">F♯/G♭</text>
+<line x1="280.0" y1="1377.0" x2="1020.0" y2="1377.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1391.5" r="5.5" fill="#E0D8C6" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1396.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">A 현</text>
+<text x="495.0" y="1396.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">A♯/B♭</text>
+<text x="645.0" y="1396.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<text x="795.0" y="1396.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<text x="945.0" y="1396.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">C♯/D♭</text>
+<rect x="180.0" y="1406.0" width="840.0" height="116.0" fill="#C9A24B" opacity="0.05"/>
+<line x1="180.0" y1="1406.0" x2="1020.0" y2="1406.0" stroke="#9A7B2E" stroke-width="0.8" stroke-linecap="butt" opacity="0.55"/>
+<text x="230.0" y="1466.0" font-family="Noto Serif KR" font-size="30" fill="#9A7B2E" font-weight="bold" text-anchor="middle">I</text>
+<text x="230.0" y="1486.0" font-family="Noto Sans KR" font-size="10.5" fill="#8A7D63" font-weight="normal" text-anchor="middle">1st pos.</text>
+<circle cx="302.0" cy="1420.5" r="5.5" fill="#C9A36A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1425.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">C 현</text>
+<text x="495.0" y="1425.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<text x="645.0" y="1425.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">D♯/E♭</text>
+<text x="795.0" y="1425.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<text x="945.0" y="1425.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<line x1="280.0" y1="1435.0" x2="1020.0" y2="1435.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1449.5" r="5.5" fill="#CBB07A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1454.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">G 현</text>
+<text x="495.0" y="1454.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">A</text>
+<text x="645.0" y="1454.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">A♯/B♭</text>
+<text x="795.0" y="1454.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<text x="945.0" y="1454.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<line x1="280.0" y1="1464.0" x2="1020.0" y2="1464.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1478.5" r="5.5" fill="#D6CDBA" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1483.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">D 현</text>
+<text x="495.0" y="1483.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<text x="645.0" y="1483.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<text x="795.0" y="1483.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">F♯/G♭</text>
+<text x="945.0" y="1483.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<line x1="280.0" y1="1493.0" x2="1020.0" y2="1493.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1507.5" r="5.5" fill="#E0D8C6" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1512.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">A 현</text>
+<text x="495.0" y="1512.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<text x="645.0" y="1512.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<text x="795.0" y="1512.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">C♯/D♭</text>
+<text x="945.0" y="1512.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<line x1="180.0" y1="1522.0" x2="1020.0" y2="1522.0" stroke="#9A7B2E" stroke-width="0.8" stroke-linecap="butt" opacity="0.55"/>
+<text x="230.0" y="1582.0" font-family="Noto Serif KR" font-size="30" fill="#9A7B2E" font-weight="bold" text-anchor="middle">II</text>
+<text x="230.0" y="1602.0" font-family="Noto Sans KR" font-size="10.5" fill="#8A7D63" font-weight="normal" text-anchor="middle">2nd pos.</text>
+<circle cx="302.0" cy="1536.5" r="5.5" fill="#C9A36A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1541.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">C 현</text>
+<text x="495.0" y="1541.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">D♯/E♭</text>
+<text x="645.0" y="1541.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<text x="795.0" y="1541.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<text x="945.0" y="1541.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">F♯/G♭</text>
+<line x1="280.0" y1="1551.0" x2="1020.0" y2="1551.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1565.5" r="5.5" fill="#CBB07A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1570.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">G 현</text>
+<text x="495.0" y="1570.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">A♯/B♭</text>
+<text x="645.0" y="1570.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<text x="795.0" y="1570.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<text x="945.0" y="1570.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">C♯/D♭</text>
+<line x1="280.0" y1="1580.0" x2="1020.0" y2="1580.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1594.5" r="5.5" fill="#D6CDBA" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1599.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">D 현</text>
+<text x="495.0" y="1599.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<text x="645.0" y="1599.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">F♯/G♭</text>
+<text x="795.0" y="1599.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<text x="945.0" y="1599.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">G♯/A♭</text>
+<line x1="280.0" y1="1609.0" x2="1020.0" y2="1609.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1623.5" r="5.5" fill="#E0D8C6" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1628.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">A 현</text>
+<text x="495.0" y="1628.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<text x="645.0" y="1628.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">C♯/D♭</text>
+<text x="795.0" y="1628.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<text x="945.0" y="1628.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">D♯/E♭</text>
+<rect x="180.0" y="1638.0" width="840.0" height="116.0" fill="#C9A24B" opacity="0.05"/>
+<line x1="180.0" y1="1638.0" x2="1020.0" y2="1638.0" stroke="#9A7B2E" stroke-width="0.8" stroke-linecap="butt" opacity="0.55"/>
+<text x="230.0" y="1698.0" font-family="Noto Serif KR" font-size="30" fill="#9A7B2E" font-weight="bold" text-anchor="middle">III</text>
+<text x="230.0" y="1718.0" font-family="Noto Sans KR" font-size="10.5" fill="#8A7D63" font-weight="normal" text-anchor="middle">3rd pos.</text>
+<circle cx="302.0" cy="1652.5" r="5.5" fill="#C9A36A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1657.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">C 현</text>
+<text x="495.0" y="1657.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<text x="645.0" y="1657.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">F♯/G♭</text>
+<text x="795.0" y="1657.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<text x="945.0" y="1657.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">G♯/A♭</text>
+<line x1="280.0" y1="1667.0" x2="1020.0" y2="1667.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1681.5" r="5.5" fill="#CBB07A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1686.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">G 현</text>
+<text x="495.0" y="1686.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<text x="645.0" y="1686.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">C♯/D♭</text>
+<text x="795.0" y="1686.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<text x="945.0" y="1686.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">D♯/E♭</text>
+<line x1="280.0" y1="1696.0" x2="1020.0" y2="1696.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1710.5" r="5.5" fill="#D6CDBA" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1715.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">D 현</text>
+<text x="495.0" y="1715.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<text x="645.0" y="1715.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">G♯/A♭</text>
+<text x="795.0" y="1715.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">A</text>
+<text x="945.0" y="1715.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">A♯/B♭</text>
+<line x1="280.0" y1="1725.0" x2="1020.0" y2="1725.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1739.5" r="5.5" fill="#E0D8C6" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1744.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">A 현</text>
+<text x="495.0" y="1744.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<text x="645.0" y="1744.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">D♯/E♭</text>
+<text x="795.0" y="1744.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<text x="945.0" y="1744.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<line x1="180.0" y1="1754.0" x2="1020.0" y2="1754.0" stroke="#9A7B2E" stroke-width="0.8" stroke-linecap="butt" opacity="0.55"/>
+<text x="230.0" y="1814.0" font-family="Noto Serif KR" font-size="30" fill="#9A7B2E" font-weight="bold" text-anchor="middle">IV</text>
+<text x="230.0" y="1834.0" font-family="Noto Sans KR" font-size="10.5" fill="#8A7D63" font-weight="normal" text-anchor="middle">4th pos.</text>
+<circle cx="302.0" cy="1768.5" r="5.5" fill="#C9A36A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1773.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">C 현</text>
+<text x="495.0" y="1773.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<text x="645.0" y="1773.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">G♯/A♭</text>
+<text x="795.0" y="1773.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">A</text>
+<text x="945.0" y="1773.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">A♯/B♭</text>
+<line x1="280.0" y1="1783.0" x2="1020.0" y2="1783.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1797.5" r="5.5" fill="#CBB07A" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1802.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">G 현</text>
+<text x="495.0" y="1802.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">D</text>
+<text x="645.0" y="1802.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">D♯/E♭</text>
+<text x="795.0" y="1802.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<text x="945.0" y="1802.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<line x1="280.0" y1="1812.0" x2="1020.0" y2="1812.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1826.5" r="5.5" fill="#D6CDBA" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1831.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">D 현</text>
+<text x="495.0" y="1831.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">A</text>
+<text x="645.0" y="1831.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">A♯/B♭</text>
+<text x="795.0" y="1831.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">B</text>
+<text x="945.0" y="1831.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">C</text>
+<line x1="280.0" y1="1841.0" x2="1020.0" y2="1841.0" stroke="#6B5F49" stroke-width="0.5" stroke-linecap="butt" opacity="0.3"/>
+<circle cx="302.0" cy="1855.5" r="5.5" fill="#E0D8C6" stroke="#6B5A3C" stroke-width="0.5"/>
+<text x="318.0" y="1860.5" font-family="Noto Sans KR" font-size="13.5" fill="#26201A" font-weight="normal" text-anchor="start">A 현</text>
+<text x="495.0" y="1860.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">E</text>
+<text x="645.0" y="1860.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">F</text>
+<text x="795.0" y="1860.5" font-family="Noto Serif KR" font-size="14.5" fill="#6B5F49" font-weight="normal" text-anchor="middle">F♯/G♭</text>
+<text x="945.0" y="1860.5" font-family="Noto Serif KR" font-size="18" fill="#26201A" font-weight="bold" text-anchor="middle">G</text>
+<line x1="280.0" y1="1248.0" x2="280.0" y2="1870.0" stroke="#6B5F49" stroke-width="0.6" stroke-linecap="butt" opacity="0.35"/>
+<line x1="420.0" y1="1248.0" x2="420.0" y2="1870.0" stroke="#6B5F49" stroke-width="0.6" stroke-linecap="butt" opacity="0.35"/>
+<line x1="570.0" y1="1248.0" x2="570.0" y2="1870.0" stroke="#6B5F49" stroke-width="0.6" stroke-linecap="butt" opacity="0.35"/>
+<line x1="720.0" y1="1248.0" x2="720.0" y2="1870.0" stroke="#6B5F49" stroke-width="0.6" stroke-linecap="butt" opacity="0.35"/>
+<line x1="870.0" y1="1248.0" x2="870.0" y2="1870.0" stroke="#6B5F49" stroke-width="0.6" stroke-linecap="butt" opacity="0.35"/>
+<line x1="1020.0" y1="1248.0" x2="1020.0" y2="1870.0" stroke="#6B5F49" stroke-width="0.6" stroke-linecap="butt" opacity="0.35"/>
+<line x1="180.0" y1="1870.0" x2="1020.0" y2="1870.0" stroke="#9A7B2E" stroke-width="1" stroke-linecap="butt" opacity="0.6"/>
+<line x1="70.0" y1="1900.0" x2="1130.0" y2="1900.0" stroke="#C9A24B" stroke-width="1" stroke-linecap="butt" opacity="0.4"/>
+<text x="70.0" y="1926.0" font-family="Noto Serif KR" font-size="14" fill="#C9A24B" font-weight="bold" text-anchor="start" letter-spacing="2">연주 노트 · NOTES</text>
+<text x="74.0" y="1952.0" font-family="Noto Sans KR" font-size="13" fill="#C9A24B" font-weight="normal" text-anchor="start">•</text>
+<text x="90.0" y="1952.0" font-family="Noto Sans KR" font-size="13" fill="#A99E84" font-weight="normal" text-anchor="start" letter-spacing="0.2">닫힌 자세에서는 이웃한 손가락 사이가 모두 반음입니다. 온음을 내려면 손가락을 건너뛰거나(예: 1·3) 손을 벌립니다(익스텐션).</text>
+<text x="74.0" y="1979.0" font-family="Noto Sans KR" font-size="13" fill="#C9A24B" font-weight="normal" text-anchor="start">•</text>
+<text x="90.0" y="1979.0" font-family="Noto Sans KR" font-size="13" fill="#A99E84" font-weight="normal" text-anchor="start" letter-spacing="0.2">익스텐션(벌림): 앞 벌림은 1번을 고정한 채 2·3·4를 반음 위로 옮겨 1–2가 온음이 되고, 손 폭이 단3도에서 장3도로 넓어집니다. 뒤 벌림은 1번만 반음 내립니다.</text>
+<text x="74.0" y="2006.0" font-family="Noto Sans KR" font-size="13" fill="#C9A24B" font-weight="normal" text-anchor="start">•</text>
+<text x="90.0" y="2006.0" font-family="Noto Sans KR" font-size="13" fill="#A99E84" font-weight="normal" text-anchor="start" letter-spacing="0.2">현은 완전5도로 조율됩니다. 같은 포지션·같은 손가락이라면 이웃한 현끼리는 정확히 완전5도 차이가 납니다 (예: C 자리는 한 현 위 F 자리와 마주봄).</text>
+<text x="74.0" y="2033.0" font-family="Noto Sans KR" font-size="13" fill="#C9A24B" font-weight="normal" text-anchor="start">•</text>
+<text x="90.0" y="2033.0" font-family="Noto Sans KR" font-size="13" fill="#A99E84" font-weight="normal" text-anchor="start" letter-spacing="0.2">♯와 ♭는 같은 음높이의 다른 표기(이명동음)입니다. 위 지도에는 두 표기를 함께 적었습니다.</text>
+<text x="74.0" y="2060.0" font-family="Noto Sans KR" font-size="13" fill="#C9A24B" font-weight="normal" text-anchor="start">•</text>
+<text x="90.0" y="2060.0" font-family="Noto Sans KR" font-size="13" fill="#A99E84" font-weight="normal" text-anchor="start" letter-spacing="0.2">칸 간격은 이해를 돕기 위한 도식이며, 실제 지판은 위로 갈수록 간격이 좁아집니다. 정확한 음정은 귀와 선생님의 지도로 익히세요.</text>
+<line x1="70.0" y1="2091.0" x2="1130.0" y2="2091.0" stroke="#C9A24B" stroke-width="0.8" stroke-linecap="butt" opacity="0.3"/>
+<text x="70.0" y="2113.0" font-family="Noto Serif KR" font-size="12" fill="#8C826B" font-weight="normal" text-anchor="start">첼로 표준 운지표 · ½–IV 포지션 · 클로즈드 프레임</text>
+<text x="1130.0" y="2113.0" font-family="Noto Serif KR" font-size="12" fill="#8C826B" font-weight="normal" text-anchor="end">Strings tuned in perfect fifths · C2 · G2 · D3 · A3</text>
+</svg>
+  </div>
+  <p class="hint">가로로 스크롤하거나 확대해 볼 수 있습니다 · 상단 버튼으로 PDF 저장</p>
+</main>
+<footer>
+  <span class="serif">첼로 표준 운지표 · ½–IV 포지션 · 클로즈드 프레임</span>
+  <span>♯ = ♭ (이명동음) · 칸 간격은 도식 · 정확한 음정은 선생님의 지도로 익히세요</span>
+</footer>
+</body>
+</html>

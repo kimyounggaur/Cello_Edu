@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">지판온 앱 아이콘</title>
+  <rect width="512" height="512" rx="112" fill="#1b1712"/>
+  <rect x="130" y="70" width="252" height="372" rx="126" fill="#2b241b" stroke="#c9a24b" stroke-width="16"/>
+  <line x1="196" y1="112" x2="196" y2="402" stroke="#c9a36a" stroke-width="12" stroke-linecap="round"/>
+  <line x1="236" y1="104" x2="236" y2="410" stroke="#cbb07a" stroke-width="9" stroke-linecap="round"/>
+  <line x1="276" y1="104" x2="276" y2="410" stroke="#d6cdba" stroke-width="7" stroke-linecap="round"/>
+  <line x1="316" y1="112" x2="316" y2="402" stroke="#e0d8c6" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="236" cy="188" r="31" fill="#f4ecd8"/>
+  <circle cx="276" cy="250" r="31" fill="#c9a24b"/>
+  <circle cx="316" cy="312" r="31" fill="#f4ecd8"/>
+</svg>
